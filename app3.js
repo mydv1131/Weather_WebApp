@@ -1,5 +1,5 @@
 // Authorised API key
-const apikey = "515b58aaaf449d42f8492d0f5fb287cc";
+const apikey = "add_your_api key_generated_from_openweathermap.org";
 // API URL for current weather
 const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 // API URL for 5-day forecast
