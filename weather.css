@@ -1,0 +1,161 @@
+/* Universal Text Color */
+* {
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+/* Left Section */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    /* background-color: #07283356; */
+    background: linear-gradient(135deg, #000000,#07283356);
+    padding: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+}
+
+/* Current Weather */
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    /* background-color: #07283351; */
+    background: linear-gradient(135deg, #000000,#07283356);
+    padding: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 18rem;
+    left: 2rem;
+}
+
+/* Forecast Buttons */
+#forecast-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    background: linear-gradient(135deg, #000000,#07283356);
+    padding: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: 18rem;
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    max-height: 30rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    right: 18rem;
+    top: 12rem;
+    overflow-y: auto;
+    /* background-color: rgba(7, 40, 51, 0.4); */
+}
+
+/* Hourly Forecast Table */
+#hourly-forecast {
+    width: 100%;
+}
+
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #000000,#07283356);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.forecast-table thead {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+.forecast-table th,
+.forecast-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+.forecast-table img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    body {
+        align-items: stretch;
+        padding: 1rem;
+    }
+
+    .left-section,
+    #current-weather,
+    #forecast-buttons,
+    .right-section {
+        position: static;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .right-section{
+        padding: 0.1rem;
+    }
+    #forecast-buttons {
+        flex-direction:row;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .forecast-table {
+        font-size: 0.85rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .forecast-table th,
+    .forecast-table td {
+        padding: 0.50rem;
+    }
+
+    .right-section {
+        max-height: none;
+    }
+}
